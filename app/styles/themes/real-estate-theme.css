@@ -1,0 +1,26 @@
+/* Real Estate Theme - Property Listings */
+
+/* Override CSS variables for real estate theme */
+body.theme-real-estate {
+  --primary-color: #1e40af;
+  --primary-hover: #1d4ed8;
+  --background-overlay: rgba(30, 64, 175, 0.1);
+}
+
+/* Background styling for real estate theme */
+body.theme-real-estate .demo-background {
+  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+}
+
+body.theme-real-estate .demo-background-overlay {
+  background: linear-gradient(to bottom right, rgba(30, 64, 175, 0.2), rgba(59, 130, 246, 0.15), rgba(147, 197, 253, 0.25));
+}
+
+/* Hero section colors for real estate theme */
+body.theme-real-estate .hero-title {
+  color: #1e3a8a !important;
+}
+
+body.theme-real-estate .hero-subtitle {
+  color: #1e40af !important;
+}

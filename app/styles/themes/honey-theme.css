@@ -1,0 +1,26 @@
+/* Honey Theme - Real Estate Agent Demo */
+
+/* Override CSS variables for honey theme */
+body.theme-honey {
+  --primary-color: #c29200;
+  --primary-hover: #a67c00;
+  --background-overlay: rgba(194, 146, 0, 0.1);
+}
+
+/* Background styling for honey theme */
+body.theme-honey .demo-background {
+  background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+}
+
+body.theme-honey .demo-background-overlay {
+  background: linear-gradient(to bottom right, rgba(251, 191, 36, 0.25), rgba(253, 224, 71, 0.2), rgba(254, 215, 170, 0.3));
+}
+
+/* Hero section colors for honey theme */
+body.theme-honey .hero-title {
+  color: #92400e !important;
+}
+
+body.theme-honey .hero-subtitle {
+  color: #a16207 !important;
+}

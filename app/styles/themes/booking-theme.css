@@ -1,0 +1,26 @@
+/* Booking Theme - Blue Sky & Beach */
+
+/* Override CSS variables for booking theme */
+body.theme-booking {
+  --primary-color: #0ea5e9;
+  --primary-hover: #0284c7;
+  --background-overlay: rgba(14, 165, 233, 0.1);
+}
+
+/* Background styling for booking theme */
+body.theme-booking .demo-background {
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+}
+
+body.theme-booking .demo-background-overlay {
+  background: linear-gradient(to bottom right, rgba(14, 165, 233, 0.2), rgba(56, 189, 248, 0.15), rgba(125, 211, 252, 0.25));
+}
+
+/* Hero section colors for booking theme */
+body.theme-booking .hero-title {
+  color: #0c4a6e !important;
+}
+
+body.theme-booking .hero-subtitle {
+  color: #0369a1 !important;
+}

@@ -1,0 +1,468 @@
+/* Demo Layout CSS - Reusable styles for all demo pages */
+
+/* CSS Custom Properties for Theming */
+:root {
+  --primary-color: #6b7280;
+  --primary-hover: #4b5563;
+  --background-overlay: rgba(0, 0, 0, 0.1);
+  --card-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  --chat-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  --border-radius: 12px;
+  --chat-border-radius: 16px;
+}
+
+/* Base Layout - No Page Scrolling */
+body {
+  overflow: hidden;
+}
+
+/* Background Styling */
+.demo-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.demo-background-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Independent Product Card Container */
+.product-card-container {
+  position: fixed !important;
+  bottom: 40px !important;
+  left: 40px !important;
+  z-index: 20 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Product Card Styling */
+.product-card {
+  width: 280px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  background: #fff;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transform: scale(1.02);
+}
+
+.product-image {
+  width: 100%;
+  height: 11rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-family: 'Inter', sans-serif;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.product-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  font-family: 'Inter', sans-serif;
+}
+
+.product-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+}
+
+.product-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: var(--primary-color);
+  opacity: 1;
+}
+
+.carousel-dot.inactive {
+  background-color: #d1d5db;
+  opacity: 0.6;
+}
+
+.carousel-dot:hover {
+  transform: scale(1.2);
+  opacity: 1 !important;
+}
+
+/* Independent Chat Box Container */
+.chat-box-container {
+  position: absolute !important;
+  top: 280px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 30 !important;
+  display: flex;
+  justify-content: center;
+}
+
+/* Chat Box Styling */
+.chat-box {
+  width: 380px;
+  height: 360px;
+  background-color: white;
+  border-radius: var(--chat-border-radius);
+  box-shadow: var(--chat-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.chat-agent-info {
+  flex: 1;
+}
+
+.chat-agent-name {
+  font-weight: 600;
+  color: #374151;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.25rem;
+}
+
+.chat-status {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.status-indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+.status-text {
+  font-size: 0.75rem;
+  color: #10b981;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Chat Messages Area */
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) #f1f1f1;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+.message {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message-bubble {
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  max-width: 75%;
+}
+
+.message-bubble.agent {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.message-bubble.user {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.message-text {
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Chat Input Area */
+.chat-input {
+  padding: 1rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.chat-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input-field {
+  flex: 1;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.chat-input-field:focus {
+  border-color: #f59e0b;
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.chat-send-button {
+  border-radius: 0.5rem;
+  background: linear-gradient(to right, #f59e0b, #f97316);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.chat-send-button:hover {
+  background: linear-gradient(to right, #d97706, #ea580c);
+}
+
+/* Call Button */
+.call-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: white;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.call-button:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.call-button-text {
+  text-align: left;
+}
+
+.call-button-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+.call-button-action {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.call-button-action-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-card-container {
+    bottom: 30px !important;
+    left: 30px !important;
+  }
+
+  .chat-box-container {
+    top: 240px !important;
+  }
+
+  .chat-box {
+    width: 360px !important;
+    height: 340px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile: Stack components vertically */
+  .product-card-container {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 20 !important;
+  }
+
+  .chat-box-container {
+    top: 200px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .product-card {
+    width: 280px !important;
+  }
+
+  .chat-box {
+    width: 320px !important;
+    height: 320px !important;
+  }
+
+  /* Adjust hero text for mobile */
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+
+  /* Call button adjustments */
+  .call-button {
+    bottom: 120px !important;
+    right: 1rem !important;
+    padding: 8px 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card-container {
+    bottom: 15px !important;
+  }
+
+  .chat-box-container {
+    top: 180px !important;
+  }
+
+  .product-card {
+    width: 260px !important;
+  }
+
+  .chat-box {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  /* Move call button higher to avoid overlap */
+  .call-button {
+    bottom: 140px !important;
+  }
+}
+
+/* Component Independence */
+.product-card-container,
+.chat-box-container {
+  pointer-events: auto;
+}
+
+/* Prevent layout shifts */
+.product-card-container *,
+.chat-box-container * {
+  box-sizing: border-box;
+}
